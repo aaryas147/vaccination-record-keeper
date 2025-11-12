@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/25.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.Controller"
+            prefWidth="600" prefHeight="480">
+
+    <children>
+        <Label text="Patient Name" layoutX="40" layoutY="40"/>
+        <TextField fx:id="patientNameField" layoutX="150" layoutY="40"/>
+
+        <Label text="Age" layoutX="40" layoutY="80"/>
+        <TextField fx:id="patientAgeField" layoutX="150" layoutY="80"/>
+
+        <Label text="Gender" layoutX="40" layoutY="120"/>
+        <ComboBox fx:id="patientGenderBox" layoutX="150" layoutY="120"/>
+
+        <Button text="Add Patient" layoutX="150" layoutY="160" onAction="#addPatient"/>
+        <Button text="View Patients" layoutX="270" layoutY="160" onAction="#viewPatients"/>
+        <Button text="Delete Patient" layoutX="400" layoutY="160" onAction="#deletePatient"/>
+
+        <Separator layoutY="200" prefWidth="520"/>
+
+        <Label text="Vaccine Name" layoutX="40" layoutY="220"/>
+        <TextField fx:id="vaccineNameField" layoutX="150" layoutY="220"/>
+
+        <Label text="Manufacturer" layoutX="40" layoutY="260"/>
+        <TextField fx:id="manufacturerField" layoutX="150" layoutY="260"/>
+
+        <Label text="Booster Due" layoutX="40" layoutY="300"/>
+        <DatePicker fx:id="boosterDatePicker" layoutX="150" layoutY="300"/>
+
+        <Button text="Add Vaccine" layoutX="150" layoutY="340" onAction="#addVaccine"/>
+
+        <TableView fx:id="patientTable" layoutX="40" layoutY="380" prefWidth="520" prefHeight="120">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="colAge" text="Age" prefWidth="100"/>
+                <TableColumn fx:id="colGender" text="Gender" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>
